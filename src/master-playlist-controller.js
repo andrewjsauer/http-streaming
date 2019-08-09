@@ -810,7 +810,7 @@ export class MasterPlaylistController extends videojs.EventTarget {
       this.masterPlaylistLoader_.master.playlists.filter(isEnabled).length === 1;
     const playlists = this.masterPlaylistLoader_.master.playlists;
 
-    if (playlists.length === 1) {
+    if (isFinalRendition) {
       // Never blacklisting this playlist because it's the only playlist
       videojs.log.warn('Problem encountered with the current ' +
                        'playlist. Trying again since it is the only playlist.');
